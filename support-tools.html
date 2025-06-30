@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Tools - Your Voice. Their Lifeline. | OneWoundedWorld</title>
+    <meta name="description" content="Equip yourself with ready-to-use resources for peaceful advocacy, public awareness, and grassroots mobilization. Download posters, email templates, and advocacy tools.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="support-tools.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">OneWoundedWorld</a>
+            
+            <div class="nav-links">
+                <a href="index.html">← Back to Home</a>
+                <a href="stories.html">Stories</a>
+                <a href="shop.html">Shop</a>
+                <a href="donate.html">Donate</a>
+                <a href="support-tools.html" class="active">Support Tools</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn-primary" onclick="scrollToSection('volunteer')">
+                    <i class="fas fa-hands-helping"></i>
+                    Volunteer
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <img src="images/support/protest-rally.jpg" alt="Peaceful protest rally" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">They Have Tanks. You Have a Voice.</h1>
+            <p class="hero-subtitle">Your voice can reach places bombs can't. Use it wisely. Use it now.</p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary btn-large" onclick="scrollToSection('downloads')">
+                    <i class="fas fa-print"></i>
+                    PRINT POSTERS
+                </button>
+                <button class="btn btn-secondary btn-large" onclick="scrollToSection('email-tool')">
+                    <i class="fas fa-envelope"></i>
+                    EMAIL REPRESENTATIVES
+                </button>
+            </div>
+        </div>
+        
+        <!-- Floating Elements Animation -->
+        <div class="floating-elements">
+            <div class="dove dove-1"><i class="fas fa-dove"></i></div>
+            <div class="dove dove-2"><i class="fas fa-dove"></i></div>
+            <div class="dove dove-3"><i class="fas fa-dove"></i></div>
+        </div>
+    </section>
+
+    <!-- Advocacy Toolkit Grid -->
+    <section class="toolkit" id="toolkit">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Weapon of Peace</h2>
+                <p class="section-subtitle">Every tool here has changed minds, moved hearts, and saved lives. Pick yours.</p>
+            </div>
+            
+            <div class="toolkit-grid">
+                <div class="tool-card" data-tool="posters">
+                    <div class="tool-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3 class="tool-title">Protest Poster Pack</h3>
+                    <p class="tool-description">Downloadable A4/A3 designs for printing or sharing. Make your street speak.</p>
+                    <div class="tool-stats">
+                        <span class="stat">
+                            <i class="fas fa-download"></i>
+                            2,847 downloads
+                        </span>
+                    </div>
+                    <button class="btn btn-tool" onclick="openToolModal('posters')">
+                        <i class="fas fa-download"></i>
+                        Download Pack
+                    </button>
+                </div>
+                
+                <div class="tool-card" data-tool="social">
+                    <div class="tool-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3 class="tool-title">Social Media Toolkit</h3>
+                    <p class="tool-description">Instagram stories, captions, trending hashtags. Turn your feed into a force.</p>
+                    <div class="tool-stats">
+                        <span class="stat">
+                            <i class="fas fa-heart"></i>
+                            1,234 shares
+                        </span>
+                    </div>
+                    <button class="btn btn-tool" onclick="openToolModal('social')">
+                        <i class="fas fa-rocket"></i>
+                        Get Tools
+                    </button>
+                </div>
+                
+                <div class="tool-card" data-tool="email">
+                    <div class="tool-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="tool-title">Email Templates</h3>
+                    <p class="tool-description">Auto-fill your MP/official with human rights appeals. 3 clicks. 1 impact.</p>
+                    <div class="tool-stats">
+                        <span class="stat">
+                            <i class="fas fa-paper-plane"></i>
+                            567 sent
+                        </span>
+                    </div>
+                    <button class="btn btn-tool" onclick="scrollToSection('email-tool')">
+                        <i class="fas fa-edit"></i>
+                        Start Writing
+                    </button>
+                </div>
+                
+                <div class="tool-card" data-tool="calls">
+                    <div class="tool-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="tool-title">Call Scripts</h3>
+                    <p class="tool-description">Ready scripts for advocacy hotlines. Your voice, our words, their action.</p>
+                    <div class="tool-stats">
+                        <span class="stat">
+                            <i class="fas fa-phone-volume"></i>
+                            89 calls made
+                        </span>
+                    </div>
+                    <button class="btn btn-tool" onclick="openToolModal('calls')">
+                        <i class="fas fa-microphone"></i>
+                        Read Scripts
+                    </button>
+                </div>
+                
+                <div class="tool-card" data-tool="banners">
+                    <div class="tool-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3 class="tool-title">Digital Banners</h3>
+                    <p class="tool-description">Web/Zoom backgrounds, profile overlays. Make every meeting matter.</p>
+                    <div class="tool-stats">
+                        <span class="stat">
+                            <i class="fas fa-eye"></i>
+                            3,456 views
+                        </span>
+                    </div>
+                    <button class="btn btn-tool" onclick="openToolModal('banners')">
+                        <i class="fas fa-palette"></i>
+                        Customize Yours
+                    </button>
+                </div>
+                
+                <div class="tool-card featured" data-tool="full-kit">
+                    <div class="tool-icon">
+                        <i class="fas fa-toolbox"></i>
+                    </div>
+                    <h3 class="tool-title">Full Activist Kit</h3>
+                    <p class="tool-description">Everything bundled. For classrooms, churches, unions. Complete arsenal.</p>
+                    <div class="tool-stats">
+                        <span class="stat">
+                            <i class="fas fa-star"></i>
+                            Most Popular
+                        </span>
+                    </div>
+                    <button class="btn btn-primary" onclick="downloadFullKit()">
+                        <i class="fas fa-download"></i>
+                        Download Full Kit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Center -->
+    <section class="downloads" id="downloads">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Print What They Try to Erase</h2>
+                <p class="section-subtitle">Let your street, store, or school speak the truth.</p>
+            </div>
+            
+            <div class="download-filters">
+                <button class="filter-btn active" data-filter="all">All Resources</button>
+                <button class="filter-btn" data-filter="posters">Posters</button>
+                <button class="filter-btn" data-filter="tshirts">T-Shirt Art</button>
+                <button class="filter-btn" data-filter="flyers">Flyers</button>
+                <button class="filter-btn" data-filter="stickers">Stickers</button>
+                <button class="filter-btn" data-filter="social">Social Media</button>
+            </div>
+            
+            <div class="downloads-grid">
+                <div class="download-item" data-category="posters">
+                    <div class="download-preview">
+                        <img src="images/support/protest-banners.jpg" alt="Never Again Means Now poster">
+                        <div class="download-overlay">
+                            <button class="btn btn-download" onclick="downloadResource('never-again-poster')">
+                                <i class="fas fa-download"></i>
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="download-info">
+                        <h4 class="download-title">Never Again Means Now</h4>
+                        <p class="download-description">A4/A3 poster for protests and displays</p>
+                        <div class="download-formats">
+                            <span class="format">PDF</span>
+                            <span class="format">PNG</span>
+                            <span class="format">SVG</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="download-item" data-category="posters">
+                    <div class="download-preview">
+                        <img src="images/support/global-protest.jpg" alt="We Are One Wounded World poster">
+                        <div class="download-overlay">
+                            <button class="btn btn-download" onclick="downloadResource('one-world-poster')">
+                                <i class="fas fa-download"></i>
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="download-info">
+                        <h4 class="download-title">We Are One Wounded World</h4>
+                        <p class="download-description">Unity poster with global solidarity message</p>
+                        <div class="download-formats">
+                            <span class="format">PDF</span>
+                            <span class="format">PNG</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="download-item" data-category="tshirts">
+                    <div class="download-preview">
+                        <img src="images/support/community-organizing.jpg" alt="Stop Erasing Us t-shirt design">
+                        <div class="download-overlay">
+                            <button class="btn btn-download" onclick="downloadResource('stop-erasing-tshirt')">
+                                <i class="fas fa-download"></i>
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="download-info">
+                        <h4 class="download-title">Stop Erasing Us</h4>
+                        <p class="download-description">Iron-on patch and t-shirt design</p>
+                        <div class="download-formats">
+                            <span class="format">PNG</span>
+                            <span class="format">SVG</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="download-item" data-category="social">
+                    <div class="download-preview">
+                        <img src="images/support/social-media-tools.png" alt="Instagram story templates">
+                        <div class="download-overlay">
+                            <button class="btn btn-download" onclick="downloadResource('instagram-stories')">
+                                <i class="fas fa-download"></i>
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="download-info">
+                        <h4 class="download-title">Instagram Story Pack</h4>
+                        <p class="download-description">10 story templates with call-to-action</p>
+                        <div class="download-formats">
+                            <span class="format">PNG</span>
+                            <span class="format">PSD</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="download-item" data-category="flyers">
+                    <div class="download-preview">
+                        <img src="images/support/digital-activism.png" alt="Event flyer template">
+                        <div class="download-overlay">
+                            <button class="btn btn-download" onclick="downloadResource('event-flyer')">
+                                <i class="fas fa-download"></i>
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="download-info">
+                        <h4 class="download-title">Event Flyer Template</h4>
+                        <p class="download-description">Customizable flyer for organizing events</p>
+                        <div class="download-formats">
+                            <span class="format">PDF</span>
+                            <span class="format">CANVA</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="download-item" data-category="stickers">
+                    <div class="download-preview">
+                        <img src="images/support/protest-rally.jpg" alt="Resistance sticker pack">
+                        <div class="download-overlay">
+                            <button class="btn btn-download" onclick="downloadResource('sticker-pack')">
+                                <i class="fas fa-download"></i>
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                    <div class="download-info">
+                        <h4 class="download-title">Resistance Sticker Pack</h4>
+                        <p class="download-description">6 printable sticker designs</p>
+                        <div class="download-formats">
+                            <span class="format">PNG</span>
+                            <span class="format">SVG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email & Call Tool -->
+    <section class="email-tool" id="email-tool">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Speak to Power</h2>
+                <p class="section-subtitle">You have the words. We wrote them for you.</p>
+            </div>
+            
+            <div class="email-tool-container">
+                <div class="tool-sidebar">
+                    <div class="location-finder">
+                        <h3>Find Your Representatives</h3>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country" onchange="updateRepresentatives()">
+                                <option value="">Select your country</option>
+                                <option value="us">United States</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="ca">Canada</option>
+                                <option value="au">Australia</option>
+                                <option value="de">Germany</option>
+                                <option value="fr">France</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="postal-code">Postal Code</label>
+                            <input type="text" id="postal-code" placeholder="Enter your postal code">
+                        </div>
+                        <button class="btn btn-secondary" onclick="findRepresentatives()">
+                            <i class="fas fa-search"></i>
+                            Find Representatives
+                        </button>
+                    </div>
+                    
+                    <div class="campaign-selector">
+                        <h3>Choose Your Campaign</h3>
+                        <div class="campaign-options">
+                            <label class="campaign-option">
+                                <input type="radio" name="campaign" value="ceasefire" checked>
+                                <span class="campaign-label">
+                                    <strong>Gaza Ceasefire</strong>
+                                    <small>Demand immediate ceasefire and humanitarian access</small>
+                                </span>
+                            </label>
+                            <label class="campaign-option">
+                                <input type="radio" name="campaign" value="sanctions">
+                                <span class="campaign-label">
+                                    <strong>Sanctions Inquiry</strong>
+                                    <small>Call for investigation into human rights violations</small>
+                                </span>
+                            </label>
+                            <label class="campaign-option">
+                                <input type="radio" name="campaign" value="aid">
+                                <span class="campaign-label">
+                                    <strong>Aid Corridor Access</strong>
+                                    <small>Ensure safe passage for humanitarian aid</small>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="email-composer">
+                    <div class="composer-header">
+                        <h3>Your Email</h3>
+                        <div class="language-selector">
+                            <select id="language" onchange="updateLanguage()">
+                                <option value="en">English</option>
+                                <option value="ar">العربية</option>
+                                <option value="fr">Français</option>
+                                <option value="fa">فارسی</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <form class="email-form" id="emailForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="sender-name">Your Name</label>
+                                <input type="text" id="sender-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sender-email">Your Email</label>
+                                <input type="email" id="sender-email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="recipient">To</label>
+                            <input type="text" id="recipient" placeholder="Representative will be auto-filled" readonly>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" value="Urgent: Call for Immediate Humanitarian Action">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="12" placeholder="Your message will be auto-generated based on your campaign selection..."></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-tertiary" onclick="previewEmail()">
+                                <i class="fas fa-eye"></i>
+                                Preview
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Email
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Signup -->
+    <section class="volunteer" id="volunteer">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Your Skills Can Save Lives</h2>
+                <p class="section-subtitle">Even from your desk. Even with just an hour a week.</p>
+            </div>
+            
+            <div class="volunteer-container">
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="translation">
+                        <div class="skill-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3 class="skill-title">Translation</h3>
+                        <p class="skill-description">Arabic/Farsi/French → English</p>
+                        <div class="skill-need">
+                            <span class="need-level high">High Need</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-skill="video">
+                        <div class="skill-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="skill-title">Video Editing</h3>
+                        <p class="skill-description">Create impact videos and testimonials</p>
+                        <div class="skill-need">
+                            <span class="need-level medium">Medium Need</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-skill="design">
+                        <div class="skill-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="skill-title">Graphic Design</h3>
+                        <p class="skill-description">Posters, social media, campaigns</p>
+                        <div class="skill-need">
+                            <span class="need-level high">High Need</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-skill="social">
+                        <div class="skill-icon">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <h3 class="skill-title">Social Media</h3>
+                        <p class="skill-description">Amplify voices, manage campaigns</p>
+                        <div class="skill-need">
+                            <span class="need-level medium">Medium Need</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-skill="legal">
+                        <div class="skill-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 class="skill-title">Legal Advocacy</h3>
+                        <p class="skill-description">Research, documentation, appeals</p>
+                        <div class="skill-need">
+                            <span class="need-level high">High Need</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-skill="fundraising">
+                        <div class="skill-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="skill-title">Fundraising</h3>
+                        <p class="skill-description">Community outreach, events</p>
+                        <div class="skill-need">
+                            <span class="need-level low">Low Need</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="volunteer-form-container">
+                    <form class="volunteer-form" id="volunteerForm">
+                        <h3>Join Our Digital Volunteers</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="vol-name">Full Name</label>
+                                <input type="text" id="vol-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="vol-email">Email Address</label>
+                                <input type="email" id="vol-email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="vol-skills">Your Skills (select all that apply)</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="skills" value="translation">
+                                    <span>Translation (Arabic/Farsi/French)</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="skills" value="video">
+                                    <span>Video Editing</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="skills" value="design">
+                                    <span>Graphic Design</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="skills" value="social">
+                                    <span>Social Media Management</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="skills" value="legal">
+                                    <span>Legal Research/Advocacy</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="skills" value="fundraising">
+                                    <span>Fundraising/Community Outreach</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="vol-availability">Time Commitment</label>
+                            <select id="vol-availability" required>
+                                <option value="">Select your availability</option>
+                                <option value="1-2">1-2 hours per week</option>
+                                <option value="3-5">3-5 hours per week</option>
+                                <option value="6-10">6-10 hours per week</option>
+                                <option value="10+">10+ hours per week</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="vol-experience">Experience/Background (optional)</label>
+                            <textarea id="vol-experience" rows="3" placeholder="Tell us about your relevant experience or why you want to help..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-hands-helping"></i>
+                            Join the Movement
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="final-cta">
+        <div class="cta-background">
+            <img src="images/support/community-organizing.jpg" alt="Community organizing" class="cta-image">
+            <div class="cta-overlay"></div>
+        </div>
+        
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2847">0</span>
+                        <span class="stat-label">Downloads This Month</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="567">0</span>
+                        <span class="stat-label">Emails Sent</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="89">0</span>
+                        <span class="stat-label">Calls Made</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="156">0</span>
+                        <span class="stat-label">Volunteers Joined</span>
+                    </div>
+                </div>
+                
+                <h2 class="cta-title">Don't Just Cry. Act.</h2>
+                <p class="cta-subtitle">Your download starts a ripple. Your share sparks a voice. Your email shakes a silence.</p>
+                
+                <div class="cta-actions">
+                    <button class="btn btn-primary btn-large" onclick="downloadFullKit()">
+                        <i class="fas fa-download"></i>
+                        DOWNLOAD ACTION PACK
+                    </button>
+                    <button class="btn btn-secondary btn-large" onclick="scrollToSection('volunteer')">
+                        <i class="fas fa-hands-helping"></i>
+                        BECOME A VOLUNTEER
+                    </button>
+                    <button class="btn btn-tertiary btn-large" onclick="shareToolkit()">
+                        <i class="fas fa-share-alt"></i>
+                        SHARE TOOLKIT
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <!-- Tool Modal -->
+    <div class="modal" id="toolModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalToolTitle">Tool Details</h3>
+                <button class="modal-close" onclick="closeModal('toolModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalToolContent">
+                <!-- Content will be dynamically loaded -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-tertiary" onclick="closeModal('toolModal')">Close</button>
+                <button class="btn btn-primary" id="modalToolAction">Download</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <div class="floating-action">
+        <button class="fab" onclick="scrollToSection('hero')">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <div class="fab-tooltip">Back to Top</div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="support-tools.js"></script>
+</body>
+</html>
+

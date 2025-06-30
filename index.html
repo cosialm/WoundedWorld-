@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneWoundedWorld - They Bomb Us. We Build Each Other.</title>
+    <meta name="description" content="Humanitarian aid for crisis situations in Iran, Palestine, and beyond. Every donation feeds a life, every purchase funds aid.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>OneWoundedWorld</h1>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">HOME</a>
+                <a href="#crisis" class="nav-link">CRISIS</a>
+                <a href="#stories" class="nav-link">STORIES</a>
+                <a href="#donate" class="nav-link">DONATE</a>
+                <a href="#shop" class="nav-link">SHOP</a>
+                <a href="#join" class="nav-link">JOIN</a>
+                <a href="#media" class="nav-link">MEDIA</a>
+                <div class="nav-languages">
+                    <span>EN</span> | <span>FR</span> | <span>AR</span> | <span>FA</span> | <span>DE</span>
+                </div>
+            </div>
+            <div class="nav-cta">
+                <button class="btn-donate">DONATE</button>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="images/gaza_aid.jpg" alt="Humanitarian crisis" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">She was 6. Her name was Zahra. They said it was a military strike.</h1>
+            <p class="hero-subtitle">This is not war. This is erasure. But we resist by rebuilding. Together.</p>
+            <div class="hero-ctas">
+                <button class="btn btn-red">🔴 DONATE NOW – Feed a Life</button>
+                <button class="btn btn-green">🟢 JOIN THE MOVEMENT – Be a Voice</button>
+                <button class="btn btn-black">⚫ SHOP TO STAND – Every Shirt Heals</button>
+            </div>
+            <p class="hero-micro">1 click = 7 meals</p>
+        </div>
+    </section>
+
+    <!-- Live Crisis Counter -->
+    <section class="crisis-counter">
+        <div class="container">
+            <div class="counter-grid">
+                <div class="counter-item">
+                    <i class="fas fa-child counter-icon"></i>
+                    <span class="counter-number" data-target="7308">0</span>
+                    <span class="counter-label">children killed</span>
+                </div>
+                <div class="counter-item">
+                    <i class="fas fa-home counter-icon"></i>
+                    <span class="counter-number" data-target="44721">0</span>
+                    <span class="counter-label">homes lost</span>
+                </div>
+                <div class="counter-item">
+                    <i class="fas fa-hospital counter-icon"></i>
+                    <span class="counter-number" data-target="81">0</span>
+                    <span class="counter-label">hospitals destroyed</span>
+                </div>
+                <div class="counter-item">
+                    <i class="fas fa-dollar-sign counter-icon"></i>
+                    <span class="counter-number" data-target="17600000">0</span>
+                    <span class="counter-label">needed this month</span>
+                </div>
+            </div>
+            <div class="counter-ctas">
+                <button class="btn btn-outline">📤 SHARE TO SAVE</button>
+                <button class="btn btn-outline">🗂 VIEW THE FULL TIMELINE</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Happening Section -->
+    <section id="crisis" class="whats-happening">
+        <div class="container">
+            <h2 class="section-title">This Is What the Headlines Hide.</h2>
+            <div class="happening-content">
+                <div class="happening-map">
+                    <img src="images/destroyed_buildings.jpg" alt="Crisis zones map" class="map-image">
+                    <div class="map-overlay">
+                        <div class="pulse-dot" style="top: 30%; left: 60%;" data-region="Palestine"></div>
+                        <div class="pulse-dot" style="top: 25%; left: 70%;" data-region="Iran"></div>
+                        <div class="pulse-dot" style="top: 35%; left: 65%;" data-region="Lebanon"></div>
+                    </div>
+                </div>
+                <div class="happening-text">
+                    <div class="explainer-cards">
+                        <div class="explainer-card active">
+                            <h3>Schools Become Targets</h3>
+                            <p>Children's backpacks found in rubble where classrooms once stood. Education becomes a casualty of war.</p>
+                        </div>
+                        <div class="explainer-card">
+                            <h3>Aid Convoys Blocked</h3>
+                            <p>Humanitarian supplies stopped at borders while families starve. Politics over people.</p>
+                        </div>
+                        <div class="explainer-card">
+                            <h3>Hospitals Under Fire</h3>
+                            <p>Medical facilities targeted, doctors flee, patients left without care. Healing becomes impossible.</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-red">📎 SEE FULL CRISIS REPORT</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three Paths to Help -->
+    <section class="three-paths">
+        <div class="container">
+            <h2 class="section-title">Your Three Paths</h2>
+            <div class="paths-grid">
+                <div class="path-card" data-path="donate">
+                    <div class="path-icon">💸</div>
+                    <h3>Donate Aid</h3>
+                    <p>$15 feeds a family for a week<br>$50 provides medical care</p>
+                    <button class="btn btn-red">GIVE NOW</button>
+                    <div class="path-testimonial">"You fed my child. — Huda, Gaza"</div>
+                </div>
+                <div class="path-card" data-path="shop">
+                    <div class="path-icon">🛍️</div>
+                    <h3>Shop Resistance</h3>
+                    <p>Wear truth. Every purchase funds aid and amplifies voices.</p>
+                    <button class="btn btn-green">BROWSE GEAR</button>
+                    <div class="path-testimonial">"My shirt started conversations. — Sarah, London"</div>
+                </div>
+                <div class="path-card" data-path="voice">
+                    <div class="path-icon">📢</div>
+                    <h3>Amplify Stories</h3>
+                    <p>Social media kits, protest materials, advocacy tools.</p>
+                    <button class="btn btn-outline">JOIN THE VOICES</button>
+                    <div class="path-testimonial">"Together we are louder. — Ahmed, Berlin"</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="shop" class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="products-grid">
+                <div class="product-card hero-product">
+                    <div class="product-image">
+                        <img src="images/humanitarian_workers.jpg" alt="Still Standing Hoodie">
+                        <div class="product-badge">Feeds 12</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>"Still Standing" Hoodie</h3>
+                        <p class="product-price">$40</p>
+                        <p class="product-description">Banned in 3 countries. Worn in 14 protests.</p>
+                        <button class="btn btn-green">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/children_crisis.jpg" alt="She Had a Name Tee">
+                        <div class="product-badge">Feeds 8</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>"She Had a Name" Tee</h3>
+                        <p class="product-price">$25</p>
+                        <button class="btn btn-green">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/iran_crisis.webp" alt="Erase the Silence Tote">
+                        <div class="product-badge">Feeds 5</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>"Erase the Silence" Tote</h3>
+                        <p class="product-price">$18</p>
+                        <button class="btn btn-green">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+            <div class="products-cta">
+                <button class="btn btn-outline">🛍️ VIEW FULL STORE</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Survivor Quotes -->
+    <section id="stories" class="survivor-quotes">
+        <div class="container">
+            <div class="quotes-carousel">
+                <div class="quote-slide active">
+                    <blockquote>"We stitched wounds with thread from my hijab."</blockquote>
+                    <cite>— Fatima, Gaza</cite>
+                    <button class="quote-audio">🔊</button>
+                </div>
+                <div class="quote-slide">
+                    <blockquote>"They buried him with his crayons."</blockquote>
+                    <cite>— Mariam, Beirut</cite>
+                    <button class="quote-audio">🔊</button>
+                </div>
+                <div class="quote-slide">
+                    <blockquote>"Our shelter was a broken bakery. It fed us and hid us."</blockquote>
+                    <cite>— Hassan, Tehran</cite>
+                    <button class="quote-audio">🔊</button>
+                </div>
+            </div>
+            <div class="quotes-nav">
+                <button class="quote-nav-btn active"></button>
+                <button class="quote-nav-btn"></button>
+                <button class="quote-nav-btn"></button>
+            </div>
+            <div class="quotes-cta">
+                <button class="btn btn-outline">📖 READ FULL STORIES → Echoes from the Rubble</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Tracker -->
+    <section class="impact-tracker">
+        <div class="container">
+            <h2 class="section-title">Where Your Money Goes</h2>
+            <div class="impact-content">
+                <div class="impact-breakdown">
+                    <div class="breakdown-chart">
+                        <div class="chart-segment" style="--percentage: 82%; --color: #1B5E20;">
+                            <span>82% Direct Aid</span>
+                        </div>
+                        <div class="chart-segment" style="--percentage: 10%; --color: #558B2F;">
+                            <span>10% Operations</span>
+                        </div>
+                        <div class="chart-segment" style="--percentage: 8%; --color: #8BC34A;">
+                            <span>8% Advocacy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="impact-live">
+                    <h3>Live Impact Ticker</h3>
+                    <div class="impact-stats">
+                        <div class="impact-stat">
+                            <span class="impact-number" data-target="38118">0</span>
+                            <span class="impact-label">meals served</span>
+                        </div>
+                        <div class="impact-stat">
+                            <span class="impact-number" data-target="6244">0</span>
+                            <span class="impact-label">trauma kits delivered</span>
+                        </div>
+                        <div class="impact-stat">
+                            <span class="impact-number" data-target="1928">0</span>
+                            <span class="impact-label">shelters raised</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-red">Fuel the next milestone – Donate</button>
+                </div>
+            </div>
+            <div class="transparency-link">
+                <a href="#" class="btn btn-outline">SEE FULL FINANCIALS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Wall -->
+    <section id="media" class="media-wall">
+        <div class="container">
+            <h2 class="section-title">"They Tried to Hide This"</h2>
+            <div class="media-grid">
+                <div class="media-item" data-consent="false">
+                    <img src="images/destroyed_buildings.jpg" alt="Destruction" class="media-image blurred">
+                    <div class="media-overlay">
+                        <p class="media-tag">"She never made it to school."</p>
+                        <div class="consent-warning">Graphic image – Tap again to view</div>
+                    </div>
+                </div>
+                <div class="media-item" data-consent="false">
+                    <img src="images/gaza_aid.jpg" alt="Aid blocked" class="media-image blurred">
+                    <div class="media-overlay">
+                        <p class="media-tag">"They hit rescue first."</p>
+                        <div class="consent-warning">Graphic image – Tap again to view</div>
+                    </div>
+                </div>
+                <div class="media-item" data-consent="false">
+                    <img src="images/children_crisis.jpg" alt="Medical crisis" class="media-image blurred">
+                    <div class="media-overlay">
+                        <p class="media-tag">"Not even medics were spared."</p>
+                        <div class="consent-warning">Graphic image – Tap again to view</div>
+                    </div>
+                </div>
+            </div>
+            <div class="media-cta">
+                <button class="btn btn-outline">📎 FULL MEDIA LIBRARY</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Capture -->
+    <section id="join" class="email-capture">
+        <div class="container">
+            <div class="email-content">
+                <div class="email-icon">✉️</div>
+                <h2>One Email. Infinite Relief.</h2>
+                <p>Stay informed. Take action. Make a difference.</p>
+                <form class="email-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-red">JOIN THE FRONT-LINE</button>
+                </form>
+                <div class="gdpr-checkbox">
+                    <input type="checkbox" id="gdpr" required>
+                    <label for="gdpr">I agree to receive updates and action alerts</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>OneWoundedWorld Verein<br>
+                    Geneva, Switzerland<br>
+                    CHE-123.456.789</p>
+                    <p>Humanitarian aid for crisis situations worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#crisis">Crisis</a></li>
+                        <li><a href="#stories">Stories</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#privacy">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Final Call to Action</h3>
+                    <button class="btn btn-red">DONATE NOW</button>
+                    <div class="payment-badges">
+                        <span>💳 Secure Payment</span>
+                        <span>🏛️ UN Global Compact</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 One Wounded World Verein, Geneva • <a href="#">IBAN</a> • <a href="#">Transparency PDF</a></p>
+                <p class="footer-final">"You can close this tab. Or you can change a life."</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="floating-action">
+        <button class="fab-main" id="fab-main">+</button>
+        <div class="fab-menu" id="fab-menu">
+            <button class="fab-item" data-action="donate">💸</button>
+            <button class="fab-item" data-action="share">📤</button>
+            <button class="fab-item" data-action="chat">💬</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

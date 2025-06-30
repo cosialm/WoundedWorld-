@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Give Relief. Restore Dignity. | OneWoundedWorld</title>
+    <meta name="description" content="Your donation becomes medicine, food, and hope. Be the reason someone survives the night.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Georgia:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="donate.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1><a href="index.html">OneWoundedWorld</a></h1>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">← Back to Home</a>
+                <a href="stories.html" class="nav-link">Stories</a>
+                <a href="#donate" class="nav-link">Donate</a>
+                <a href="#impact" class="nav-link">Impact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sticky Donation Bar -->
+    <div class="sticky-donate-bar" id="stickyBar">
+        <div class="sticky-content">
+            <span class="sticky-text">💸 Save Lives Now</span>
+            <button class="sticky-btn" onclick="scrollToDonate()">DONATE</button>
+        </div>
+    </div>
+
+    <!-- Impact Header -->
+    <section class="impact-header" id="hero">
+        <div class="hero-background">
+            <img src="donate-images/cooking-crisis.jpg" alt="Mother cooking in crisis" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="survivor-quote">
+                <blockquote>"We don't want your pity. We need clean water and antibiotics."</blockquote>
+                <cite>— Fatima, Gaza</cite>
+            </div>
+            
+            <h1 class="hero-title">They Lost Everything.<br>You Still Have a Choice.</h1>
+            <p class="hero-subtitle">Your donation becomes medicine. Be the reason someone survives the night.</p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary btn-large" onclick="scrollToDonate()">
+                    <i class="fas fa-heart"></i> DONATE ONCE
+                </button>
+                <button class="btn btn-secondary btn-large" onclick="scrollToDonate('monthly')">
+                    <i class="fas fa-shield-heart"></i> BECOME A MONTHLY GUARDIAN
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart Donation Module -->
+    <section id="donate" class="donation-module">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Impact</h2>
+                <p class="section-description">Every dollar you give transforms into immediate relief. Choose the impact that speaks to your heart.</p>
+            </div>
+            
+            <div class="donation-form">
+                <div class="donation-type-toggle">
+                    <button class="toggle-btn active" data-type="once">One-Time Gift</button>
+                    <button class="toggle-btn" data-type="monthly">Monthly Guardian</button>
+                </div>
+                
+                <div class="donation-amounts">
+                    <div class="amount-option" data-amount="15">
+                        <div class="amount-value">$15</div>
+                        <div class="amount-label">Feeds 1 Family for 1 Week</div>
+                        <div class="amount-details">Rice, oil, lentils, baby milk</div>
+                    </div>
+                    
+                    <div class="amount-option" data-amount="40">
+                        <div class="amount-value">$40</div>
+                        <div class="amount-label">Saves a Wounded Child</div>
+                        <div class="amount-details">Trauma bandages, antibiotics</div>
+                    </div>
+                    
+                    <div class="amount-option" data-amount="100">
+                        <div class="amount-value">$100</div>
+                        <div class="amount-label">Restores a Tent for 6</div>
+                        <div class="amount-details">Shelter + blankets + water</div>
+                    </div>
+                    
+                    <div class="amount-option" data-amount="250">
+                        <div class="amount-value">$250</div>
+                        <div class="amount-label">Rebuilds a Classroom Corner</div>
+                        <div class="amount-details">Books, tarp, whiteboard</div>
+                    </div>
+                    
+                    <div class="amount-option custom">
+                        <div class="amount-value">
+                            <input type="number" id="customAmount" placeholder="$" min="1">
+                        </div>
+                        <div class="amount-label">Your Power. Your Scale.</div>
+                        <div class="amount-details">Custom impact amount</div>
+                    </div>
+                </div>
+                
+                <div class="donation-options">
+                    <div class="option-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="honorDonation">
+                            <span class="checkmark"></span>
+                            Donate in honor of someone special
+                        </label>
+                        <input type="text" id="honorName" placeholder="Enter name" class="honor-input" style="display: none;">
+                    </div>
+                </div>
+                
+                <div class="impact-calculator">
+                    <div class="calculator-result">
+                        <span class="impact-text">Your $<span id="selectedAmount">40</span> will provide:</span>
+                        <div class="impact-breakdown" id="impactBreakdown">
+                            <div class="impact-item">
+                                <i class="fas fa-medkit"></i>
+                                <span>Medical supplies for 1 wounded child</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary btn-donate" id="donateBtn">
+                    <i class="fas fa-heart"></i>
+                    <span>DONATE $<span id="donateAmount">40</span> NOW</span>
+                </button>
+                
+                <div class="security-badges">
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>SSL Secured</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-lock"></i>
+                        <span>PCI Compliant</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>Swiss NGO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Transparency -->
+    <section id="impact" class="impact-transparency">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Where Does Your Money Go?</h2>
+                <p class="section-description">91% of all funds go directly to aid. Audited monthly. Complete transparency.</p>
+            </div>
+            
+            <div class="transparency-content">
+                <div class="allocation-chart">
+                    <div class="chart-container">
+                        <canvas id="allocationChart"></canvas>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #B71C1C;"></div>
+                            <span>Field Relief Kits (41%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #1B5E20;"></div>
+                            <span>Medical Aid (30%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #B8860B;"></div>
+                            <span>Shelter & Tents (12%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #558B2F;"></div>
+                            <span>Psychosocial Support (9%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #424242;"></div>
+                            <span>Admin & Operations (8%)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="allocation-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">🥣</div>
+                        <h4>Field Relief Kits</h4>
+                        <p>Food packages, clean water, basic hygiene supplies delivered directly to families in crisis zones.</p>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">🩺</div>
+                        <h4>Medical Aid</h4>
+                        <p>Emergency medical supplies, trauma care, antibiotics, and life-saving equipment for field hospitals.</p>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">🏕️</div>
+                        <h4>Shelter & Tents</h4>
+                        <p>Emergency housing, blankets, weatherproofing materials, and safe spaces for displaced families.</p>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">🧠</div>
+                        <h4>Psychosocial Support</h4>
+                        <p>Trauma counseling, mental health support, and community healing programs for survivors.</p>
+                    </div>
+                </div>
+                
+                <div class="transparency-footer">
+                    <p class="audit-statement">Independently audited monthly by Swiss financial authorities</p>
+                    <a href="#" class="download-report">
+                        <i class="fas fa-download"></i> Download Latest Financial Report
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Impact Tracker -->
+    <section class="impact-tracker">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">You Just Changed a Life</h2>
+                <p class="section-description">Watch the real-time impact of donations from people like you around the world.</p>
+            </div>
+            
+            <div class="live-counters">
+                <div class="counter-item">
+                    <div class="counter-icon">🍲</div>
+                    <div class="counter-number" data-target="18204">0</div>
+                    <div class="counter-label">Meals served today</div>
+                </div>
+                
+                <div class="counter-item">
+                    <div class="counter-icon">💊</div>
+                    <div class="counter-number" data-target="2107">0</div>
+                    <div class="counter-label">Medical packs delivered</div>
+                </div>
+                
+                <div class="counter-item">
+                    <div class="counter-icon">🏚️</div>
+                    <div class="counter-number" data-target="384">0</div>
+                    <div class="counter-label">Shelters repaired</div>
+                </div>
+                
+                <div class="counter-item">
+                    <div class="counter-icon">❤️</div>
+                    <div class="counter-number" data-target="1247">0</div>
+                    <div class="counter-label">Children helped</div>
+                </div>
+            </div>
+            
+            <div class="impact-testimonials">
+                <div class="testimonial active">
+                    <blockquote>"$15 saved my baby from malnutrition. Thank you."</blockquote>
+                    <cite>— Azar, Kerman</cite>
+                </div>
+                
+                <div class="testimonial">
+                    <blockquote>"You gave me gauze and hope."</blockquote>
+                    <cite>— Yusef, Gaza</cite>
+                </div>
+                
+                <div class="testimonial">
+                    <blockquote>"My children can sleep warm tonight because of your kindness."</blockquote>
+                    <cite>— Amira, Shiraz</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Elements -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>Swiss Registered NGO</h4>
+                    <p>Officially registered humanitarian organization with full transparency and accountability.</p>
+                </div>
+                
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Third-Party Audited</h4>
+                    <p>Independent financial audits ensure every dollar reaches those who need it most.</p>
+                </div>
+                
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>50,000+ Monthly Donors</h4>
+                    <p>Join a global community of compassionate people making a real difference.</p>
+                </div>
+                
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4>156 Countries Reached</h4>
+                    <p>Direct field operations in crisis zones worldwide with local partnerships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="payment-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Complete Your Donation</h3>
+                <button class="close-btn" onclick="closePaymentModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="donation-summary">
+                    <div class="summary-item">
+                        <span>Donation Amount:</span>
+                        <span class="amount">$<span id="modalAmount">40</span></span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Type:</span>
+                        <span id="modalType">One-time</span>
+                    </div>
+                    <div class="summary-item" id="honorSummary" style="display: none;">
+                        <span>In honor of:</span>
+                        <span id="modalHonor"></span>
+                    </div>
+                </div>
+                
+                <div class="payment-methods">
+                    <h4>Choose Payment Method</h4>
+                    <div class="payment-options">
+                        <button class="payment-btn" data-method="card">
+                            <i class="fas fa-credit-card"></i>
+                            Credit/Debit Card
+                        </button>
+                        <button class="payment-btn" data-method="paypal">
+                            <i class="fab fa-paypal"></i>
+                            PayPal
+                        </button>
+                        <button class="payment-btn" data-method="apple">
+                            <i class="fab fa-apple"></i>
+                            Apple Pay
+                        </button>
+                        <button class="payment-btn" data-method="google">
+                            <i class="fab fa-google"></i>
+                            Google Pay
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="payment-form" id="cardForm">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="123" maxlength="4">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" id="cardName" placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="john@example.com">
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary btn-full" id="processPayment">
+                    <i class="fas fa-lock"></i>
+                    SECURE DONATION - $<span id="finalAmount">40</span>
+                </button>
+                
+                <div class="security-info">
+                    <p><i class="fas fa-shield-alt"></i> Your payment is secured with 256-bit SSL encryption</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thankYouModal" class="thank-you-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="closeThankYouModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="thank-you-content">
+                    <div class="thank-you-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    
+                    <h2>Thank You for Saving Lives</h2>
+                    <p class="impact-message">Your $<span id="thankYouAmount">40</span> donation will provide medical supplies for 1 wounded child in Gaza.</p>
+                    
+                    <div class="thank-you-video">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play"></i>
+                            <p>Watch: "We survive because of you"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="next-steps">
+                        <h4>What happens next?</h4>
+                        <div class="step">
+                            <i class="fas fa-envelope"></i>
+                            <span>You'll receive a confirmation email within minutes</span>
+                        </div>
+                        <div class="step">
+                            <i class="fas fa-truck"></i>
+                            <span>Your aid will be deployed within 48 hours</span>
+                        </div>
+                        <div class="step">
+                            <i class="fas fa-camera"></i>
+                            <span>We'll send you photos of the impact you made</span>
+                        </div>
+                    </div>
+                    
+                    <div class="thank-you-actions">
+                        <button class="btn btn-secondary" onclick="subscribeUpdates()">
+                            <i class="fas fa-envelope"></i> Get Monthly Field Updates
+                        </button>
+                        <button class="btn btn-tertiary" onclick="shareImpact()">
+                            <i class="fas fa-share"></i> Share Your Impact
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 OneWoundedWorld.org - Swiss Registered NGO #CH-123.456.789</p>
+                <div class="footer-links">
+                    <a href="index.html">← Return to Homepage</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Financial Reports</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="donate.js"></script>
+</body>
+</html>
+

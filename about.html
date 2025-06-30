@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Who We Are. Why We Fight. | OneWoundedWorld</title>
+    <meta name="description" content="Learn about OneWoundedWorld's mission, values, and the people behind our humanitarian work in Iran, Palestine, and beyond.">
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">OneWoundedWorld</a>
+            <div class="nav-links">
+                <a href="index.html">← Back to Home</a>
+                <a href="stories.html">Stories</a>
+                <a href="shop.html">Shop</a>
+                <a href="donate.html">Donate</a>
+                <a href="support-tools.html">Support Tools</a>
+                <a href="crisis.html">Crisis</a>
+                <a href="about.html" class="active">About</a>
+            </div>
+            <button class="help-btn">
+                <span>❤️</span>
+                Help Now
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="floating-flags">
+                <div class="flag-icon iran">🇮🇷</div>
+                <div class="flag-icon palestine">🇵🇸</div>
+                <div class="flag-icon lebanon">🇱🇧</div>
+                <div class="flag-icon somalia">🇸🇴</div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">We Are Not a Charity.<br>We Are a Global Family of Conscience.</h1>
+            <p class="hero-subtitle">Founded in grief. Built in resistance. Moving in truth.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('team')">MEET OUR TEAM</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('story')">READ OUR STORY</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Origin Story -->
+    <section id="story" class="origin-story">
+        <div class="container">
+            <h2 class="section-title">Born From Ashes</h2>
+            <p class="section-subtitle">Every attack has a date. Every date has a story. Every story has a name.</p>
+            
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item" data-date="May 2025">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>First Aid Mission</h3>
+                        <p>Emergency response to Rafsanjan earthquake. 200 families received immediate shelter and medical care.</p>
+                        <blockquote>"We couldn't wait for governments. So we became the help we prayed for."</blockquote>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-date="June 2025">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Mobile Clinic in Khan Yunis</h3>
+                        <p>Established first mobile medical unit serving 500+ patients weekly in Gaza's most affected areas.</p>
+                        <blockquote>"Every bandage is a promise. Every medicine is hope."</blockquote>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-date="July 2025">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Global Campaign Launch</h3>
+                        <p>Telegram campaign reaches 1M people worldwide. #OneWoundedWorld trends in 12 countries.</p>
+                        <blockquote>"Silence is complicity. We chose to speak."</blockquote>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-date="Present">
+                    <div class="timeline-marker active"></div>
+                    <div class="timeline-content">
+                        <h3>Growing Movement</h3>
+                        <p>Operating in 4 countries with 200+ volunteers. Serving 10,000+ people monthly.</p>
+                        <blockquote>"This is just the beginning."</blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-cta">
+                <button class="btn btn-outline">READ OUR FOUNDATION DOCUMENTS</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="mission-values">
+        <div class="container">
+            <h2 class="section-title">What Guides Us</h2>
+            <p class="section-subtitle">Five principles that shape every decision, every action, every breath.</p>
+            
+            <div class="values-grid">
+                <div class="value-card" data-value="truth">
+                    <div class="value-icon">🔍</div>
+                    <h3>Truth</h3>
+                    <p class="value-description">We name what others fear to admit.</p>
+                    <div class="value-detail">
+                        <p>In a world of sanitized headlines and diplomatic silence, we document reality. Every statistic we share is verified. Every story we tell is authentic. Truth is not comfortable, but it is necessary.</p>
+                    </div>
+                </div>
+
+                <div class="value-card" data-value="transparency">
+                    <div class="value-icon">💎</div>
+                    <h3>Transparency</h3>
+                    <p class="value-description">Every dollar is traceable.</p>
+                    <div class="value-detail">
+                        <p>Our books are open. Our processes are clear. From donation to delivery, you can track every cent. No hidden salaries, no administrative bloat, no corporate overhead. Just direct impact.</p>
+                    </div>
+                </div>
+
+                <div class="value-card" data-value="empathy">
+                    <div class="value-icon">🤝</div>
+                    <h3>Empathy</h3>
+                    <p class="value-description">We don't serve. We stand beside.</p>
+                    <div class="value-detail">
+                        <p>We reject the savior complex. We are not here to rescue anyone. We are here to amplify voices, share resources, and stand in solidarity with those who refuse to be silenced.</p>
+                    </div>
+                </div>
+
+                <div class="value-card" data-value="resistance">
+                    <div class="value-icon">✊</div>
+                    <h3>Resistance</h3>
+                    <p class="value-description">Nonviolent, but never neutral.</p>
+                    <div class="value-detail">
+                        <p>Neutrality in the face of injustice is complicity. We choose sides - the side of human dignity, of children's right to dream, of mothers' right to grieve, of communities' right to exist.</p>
+                    </div>
+                </div>
+
+                <div class="value-card" data-value="hope">
+                    <div class="value-icon">🌱</div>
+                    <h3>Hope</h3>
+                    <p class="value-description">Built from ruins, one act at a time.</p>
+                    <div class="value-detail">
+                        <p>Hope is not passive optimism. It is active defiance against despair. Every meal we deliver, every wound we heal, every story we share is an act of hope made manifest.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="values-cta">
+                <button class="btn btn-primary">VIEW CURRENT PROJECTS</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Profiles -->
+    <section id="team" class="team-profiles">
+        <div class="container">
+            <h2 class="section-title">We Are You</h2>
+            <p class="section-subtitle">Doctors, teachers, students, parents. United by conscience, driven by love.</p>
+            
+            <div class="team-scroll">
+                <div class="team-member" data-member="reza">
+                    <div class="member-photo">
+                        <img src="images/about/medical_iran.jpg" alt="Reza Hashemi">
+                    </div>
+                    <div class="member-info">
+                        <h3>Reza Hashemi</h3>
+                        <p class="member-role">Field Coordinator, Tehran</p>
+                        <p class="member-quote">"I watched my clinic collapse. Now I help rebuild others."</p>
+                        <button class="member-expand">Read Full Story</button>
+                    </div>
+                    <div class="member-story">
+                        <p>Dr. Reza Hashemi was treating patients when the earthquake hit Rafsanjan. His clinic, built with 15 years of savings, crumbled in 30 seconds. Instead of rebuilding for himself, he used his insurance money to buy mobile medical equipment. "If my clinic had to fall," he says, "at least it can rise again wherever it's needed most."</p>
+                        <p>Today, Reza coordinates our medical response across Iran, training local volunteers and establishing pop-up clinics in crisis zones. He carries a photo of his destroyed clinic in his medical bag - not as a reminder of loss, but as proof that from every ending, something new can begin.</p>
+                    </div>
+                </div>
+
+                <div class="team-member" data-member="layla">
+                    <div class="member-photo">
+                        <img src="images/about/medical_palestine.jpg" alt="Layla Al-Rashid">
+                    </div>
+                    <div class="member-info">
+                        <h3>Layla Al-Rashid</h3>
+                        <p class="member-role">Community Organizer, Gaza</p>
+                        <p class="member-quote">"They destroyed our schools. So we teach in the rubble."</p>
+                        <button class="member-expand">Read Full Story</button>
+                    </div>
+                    <div class="member-story">
+                        <p>Layla was a primary school teacher before the bombing. When her school was destroyed, she didn't wait for reconstruction. She gathered the surviving desks, found a partially standing wall, and continued teaching. "Education is resistance," she says. "Every lesson is an act of defiance."</p>
+                        <p>Now she coordinates our education initiatives across Gaza, running mobile schools and distributing learning materials. Her classroom has no roof, but it has something more important: the unbreakable spirit of children who refuse to stop learning.</p>
+                    </div>
+                </div>
+
+                <div class="team-member" data-member="amara">
+                    <div class="member-photo">
+                        <img src="images/about/diverse_team.jpg" alt="Amara Johnson">
+                    </div>
+                    <div class="member-info">
+                        <h3>Amara Johnson</h3>
+                        <p class="member-role">Digital Coordinator, London</p>
+                        <p class="member-quote">"Every share is a voice. Every voice matters."</p>
+                        <button class="member-expand">Read Full Story</button>
+                    </div>
+                    <div class="member-story">
+                        <p>Amara was a social media manager for a tech company when she saw the first videos from Gaza. "I realized I was using my skills to sell products while people were dying," she recalls. She quit her job the next day and dedicated her expertise to amplifying humanitarian voices.</p>
+                        <p>She now manages our global digital campaigns, turning social media into a tool for justice. Under her leadership, our content has reached over 50 million people, proving that the internet can be a force for compassion, not just commerce.</p>
+                    </div>
+                </div>
+
+                <div class="team-member" data-member="hassan">
+                    <div class="member-photo">
+                        <img src="images/about/volunteers_packing.jpg" alt="Hassan Okafor">
+                    </div>
+                    <div class="member-info">
+                        <h3>Hassan Okafor</h3>
+                        <p class="member-role">Logistics Director, Nairobi</p>
+                        <p class="member-quote">"Every box we pack carries someone's tomorrow."</p>
+                        <button class="member-expand">Read Full Story</button>
+                    </div>
+                    <div class="member-story">
+                        <p>Hassan fled Somalia as a refugee 20 years ago. He knows what it means to depend on the kindness of strangers. "I remember the taste of that first meal in the refugee camp," he says. "It tasted like hope." Now he ensures that hope reaches others.</p>
+                        <p>As our logistics director, Hassan coordinates the movement of supplies across four countries. His warehouse in Nairobi processes 10,000 aid packages monthly. Each one is packed with the care of someone who remembers what it means to be hungry, to be displaced, to be forgotten.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-cta">
+                <button class="btn btn-primary">JOIN OUR GLOBAL VOLUNTEERS</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparency Section -->
+    <section class="transparency">
+        <div class="container">
+            <h2 class="section-title">Every Dollar. Every Life.</h2>
+            <p class="section-subtitle">No hidden salaries. No waste. Every donation creates impact you can track.</p>
+            
+            <div class="transparency-content">
+                <div class="fund-allocation">
+                    <h3>Where Your Money Goes</h3>
+                    <div class="allocation-chart">
+                        <div class="chart-bar">
+                            <div class="bar-fill" data-percentage="78" style="--percentage: 78%">
+                                <span class="bar-label">Direct Aid</span>
+                                <span class="bar-value">78%</span>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-fill" data-percentage="12" style="--percentage: 12%">
+                                <span class="bar-label">Logistics</span>
+                                <span class="bar-value">12%</span>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-fill" data-percentage="10" style="--percentage: 10%">
+                                <span class="bar-label">Awareness</span>
+                                <span class="bar-value">10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="impact-tracker">
+                    <h3>Live Impact Tracker</h3>
+                    <div class="impact-stats">
+                        <div class="impact-stat">
+                            <div class="stat-number" data-target="15420">0</div>
+                            <div class="stat-label">Meals Delivered</div>
+                        </div>
+                        <div class="impact-stat">
+                            <div class="stat-number" data-target="3240">0</div>
+                            <div class="stat-label">Medical Treatments</div>
+                        </div>
+                        <div class="impact-stat">
+                            <div class="stat-number" data-target="890">0</div>
+                            <div class="stat-label">Families Housed</div>
+                        </div>
+                        <div class="impact-stat">
+                            <div class="stat-number" data-target="1200">0</div>
+                            <div class="stat-label">Children in School</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transparency-downloads">
+                <h3>Download Our Reports</h3>
+                <div class="download-grid">
+                    <div class="download-item">
+                        <div class="download-icon">📊</div>
+                        <h4>Audited Statement Q2 2025</h4>
+                        <p>Complete financial breakdown with third-party verification</p>
+                        <button class="btn btn-outline download-btn" data-file="audit-q2-2025.pdf">Download PDF</button>
+                    </div>
+                    <div class="download-item">
+                        <div class="download-icon">📈</div>
+                        <h4>Annual Humanitarian Report 2024-25</h4>
+                        <p>Comprehensive impact assessment and future planning</p>
+                        <button class="btn btn-outline download-btn" data-file="annual-report-2024-25.pdf">Download PDF</button>
+                    </div>
+                    <div class="download-item">
+                        <div class="download-icon">🔍</div>
+                        <h4>Transparency Charter</h4>
+                        <p>Our commitment to accountability and open governance</p>
+                        <button class="btn btn-outline download-btn" data-file="transparency-charter.pdf">Download PDF</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transparency-cta">
+                <button class="btn btn-primary">VIEW ALL AUDITS</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnerships -->
+    <section class="partnerships">
+        <div class="container">
+            <h2 class="section-title">Trusted By</h2>
+            <p class="section-subtitle">Building bridges, not walls. Creating networks, not hierarchies.</p>
+            
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjYwIiB2aWV3Qm94PSIwIDAgMTIwIDYwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjRjVGNUY1Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIzNSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5SZWQgQ3Jlc2NlbnQ8L3RleHQ+Cjwvc3ZnPgo=" alt="Red Crescent">
+                </div>
+                <div class="partner-logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjYwIiB2aWV3Qm94PSIwIDAgMTIwIDYwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjRjVGNUY1Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIzNSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TYWZlQWlkPC90ZXh0Pgo8L3N2Zz4K" alt="SafeAid">
+                </div>
+                <div class="partner-logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjYwIiB2aWV3Qm94PSIwIDAgMTIwIDYwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjRjVGNUY1Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIzNSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Hcm91bmRzd2VsbDwvdGV4dD4KPHN2Zz4K" alt="Groundswell">
+                </div>
+                <div class="partner-logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjYwIiB2aWV3Qm94PSIwIDAgMTIwIDYwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjRjVGNUY1Ii8+Cjx0ZXh0IHg9IjYwIiB5PSIzNSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Ib3BlIEFsbGlhbmNlPC90ZXh0Pgo8L3N2Zz4K" alt="Hope Alliance">
+                </div>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonial">
+                    <blockquote>"OneWoundedWorld is one of the most agile, ethical grassroots organizations we've ever partnered with. Their transparency and direct impact approach sets a new standard for humanitarian work."</blockquote>
+                    <cite>— Dr. Sarah Mitchell, Director of International Partnerships, SafeAid</cite>
+                </div>
+                <div class="testimonial">
+                    <blockquote>"In a sector often criticized for bureaucracy, OneWoundedWorld proves that humanitarian aid can be both rapid and responsible. Their work in Gaza has been exemplary."</blockquote>
+                    <cite>— Ahmed Hassan, Regional Coordinator, Red Crescent</cite>
+                </div>
+            </div>
+
+            <div class="partnerships-cta">
+                <button class="btn btn-primary">BECOME A PARTNER</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Call to Action -->
+    <section class="final-cta">
+        <div class="cta-background">
+            <div class="cta-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join the Resistance of Compassion</h2>
+                <p>You've seen our hearts. You've seen our work.<br>Now help us make this louder, bigger, bolder.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary">DONATE</button>
+                    <button class="btn btn-secondary">VOLUNTEER</button>
+                    <button class="btn btn-outline">TELL THE WORLD</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Floating Action Button -->
+    <div class="floating-action">
+        <button class="fab-main">
+            <span>❤️</span>
+        </button>
+        <div class="fab-menu">
+            <button class="fab-item" data-action="donate">💝 Donate</button>
+            <button class="fab-item" data-action="share">📢 Share</button>
+            <button class="fab-item" data-action="volunteer">🤝 Volunteer</button>
+        </div>
+    </div>
+
+    <script src="about.js"></script>
+</body>
+</html>
+

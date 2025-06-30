@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories - Lives Interrupted | OneWoundedWorld</title>
+    <link rel="stylesheet" href="stories.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">OneWoundedWorld</a>
+            <div class="nav-links">
+                <a href="index.html">← Back to Home</a>
+                <a href="stories.html" class="active">Stories</a>
+                <a href="shop.html">Shop</a>
+                <a href="donate.html">Donate</a>
+                <a href="#impact">Impact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-secondary" onclick="openSubmissionModal()">
+                    <i class="fas fa-microphone"></i> Share Your Story
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="images/stories/hero-father-photo.jpg" alt="Father holding photograph in rubble" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">These Are Not Numbers.<br>These Are Names, Voices, and Mothers.</h1>
+            <p class="hero-subtitle">They taught. They danced. They cooked for their families. And they died with stories no one would tell — until now.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('stories')">
+                    <i class="fas fa-book-open"></i> READ STORIES
+                </button>
+                <button class="btn btn-secondary" onclick="openSubmissionModal()">
+                    <i class="fas fa-microphone"></i> SHARE YOUR OWN
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Filters -->
+    <section class="story-filters">
+        <div class="container">
+            <h2 class="section-title">Browse the Resistance of Memory</h2>
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All Voices</button>
+                <button class="filter-tab" data-filter="children">🧒 Children</button>
+                <button class="filter-tab" data-filter="women">👩 Women</button>
+                <button class="filter-tab" data-filter="medics">🧑‍⚕️ Medics</button>
+                <button class="filter-tab" data-filter="elders">👵 Elders</button>
+                <button class="filter-tab" data-filter="displaced">🏚️ Displaced</button>
+            </div>
+            <div class="region-filters">
+                <button class="region-btn active" data-region="all">All Regions</button>
+                <button class="region-btn" data-region="palestine">Palestine</button>
+                <button class="region-btn" data-region="iran">Iran</button>
+                <button class="region-btn" data-region="lebanon">Lebanon</button>
+                <button class="region-btn" data-region="somalia">Somalia</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Stories -->
+    <section class="stories" id="stories">
+        <div class="container">
+            <div class="stories-grid">
+                <!-- Story 1: Layla, Gaza -->
+                <div class="story-card" data-category="children" data-region="palestine">
+                    <div class="story-image-container">
+                        <img src="images/stories/gaza-children.jpg" alt="Layla, 9, Gaza" class="story-image">
+                        <div class="story-overlay">
+                            <div class="story-tags">
+                                <span class="tag tag-region">Gaza</span>
+                                <span class="tag tag-category">Child Survivor</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <blockquote class="story-quote">"I used to draw stars. Now I only draw tanks."</blockquote>
+                        <div class="story-meta">
+                            <h3 class="story-name">Layla, 9</h3>
+                            <p class="story-location">Gaza, Palestine</p>
+                            <p class="story-impact">Lost her school in bombing</p>
+                        </div>
+                        <button class="btn btn-story" onclick="openStoryModal('layla')">
+                            READ FULL STORY
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Story 2: Iman, Iran -->
+                <div class="story-card" data-category="medics" data-region="iran">
+                    <div class="story-image-container">
+                        <img src="images/stories/iran-earthquake.jpg" alt="Iman, 42, Iran" class="story-image">
+                        <div class="story-overlay">
+                            <div class="story-tags">
+                                <span class="tag tag-region">Iran</span>
+                                <span class="tag tag-category">Medical Worker</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <blockquote class="story-quote">"They bombed my clinic. So I treat people in my kitchen."</blockquote>
+                        <div class="story-meta">
+                            <h3 class="story-name">Iman, 42</h3>
+                            <p class="story-location">Kermanshah, Iran</p>
+                            <p class="story-impact">Earthquake survivor, makeshift medic</p>
+                        </div>
+                        <button class="btn btn-story" onclick="openStoryModal('iman')">
+                            READ FULL STORY
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Story 3: Amira, Palestine -->
+                <div class="story-card" data-category="women" data-region="palestine">
+                    <div class="story-image-container">
+                        <img src="images/stories/palestinian-women.jpg" alt="Amira, 34, Palestine" class="story-image">
+                        <div class="story-overlay">
+                            <div class="story-tags">
+                                <span class="tag tag-region">Palestine</span>
+                                <span class="tag tag-category">Mother</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <blockquote class="story-quote">"Every morning I wake up and choose hope over despair."</blockquote>
+                        <div class="story-meta">
+                            <h3 class="story-name">Amira, 34</h3>
+                            <p class="story-location">Rafah, Palestine</p>
+                            <p class="story-impact">Mother of four, displaced three times</p>
+                        </div>
+                        <button class="btn btn-story" onclick="openStoryModal('amira')">
+                            READ FULL STORY
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Story 4: Hassan, Iran -->
+                <div class="story-card" data-category="elders" data-region="iran">
+                    <div class="story-image-container">
+                        <img src="images/stories/iran-survivors.jpg" alt="Hassan, 67, Iran" class="story-image">
+                        <div class="story-overlay">
+                            <div class="story-tags">
+                                <span class="tag tag-region">Iran</span>
+                                <span class="tag tag-category">Elder</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <blockquote class="story-quote">"I've rebuilt this house three times. I'll rebuild it again."</blockquote>
+                        <div class="story-meta">
+                            <h3 class="story-name">Hassan, 67</h3>
+                            <p class="story-location">Sarpol-e Zahab, Iran</p>
+                            <p class="story-impact">Earthquake survivor, community leader</p>
+                        </div>
+                        <button class="btn btn-story" onclick="openStoryModal('hassan')">
+                            READ FULL STORY
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Testimonies -->
+    <section class="audio-testimonies">
+        <div class="container">
+            <h2 class="section-title">The Sound of Survival</h2>
+            <p class="section-subtitle">Listen to What the Airstrikes Couldn't Silence</p>
+            
+            <div class="audio-grid">
+                <!-- Audio 1: Amina, Somalia -->
+                <div class="audio-card">
+                    <div class="audio-visual">
+                        <div class="audio-waveform" id="waveform1">
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                        </div>
+                        <button class="audio-play-btn" onclick="playAudio('audio1')">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="audio-info">
+                        <h4>Amina's Journey</h4>
+                        <p>"From drought to refugee camp - a mother's survival story"</p>
+                        <span class="audio-duration">2:34</span>
+                    </div>
+                </div>
+
+                <!-- Audio 2: Yusef, Palestine -->
+                <div class="audio-card">
+                    <div class="audio-visual">
+                        <div class="audio-waveform" id="waveform2">
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                        </div>
+                        <button class="audio-play-btn" onclick="playAudio('audio2')">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="audio-info">
+                        <h4>Yusef's School</h4>
+                        <p>"A 10-year-old explains why education matters during war"</p>
+                        <span class="audio-duration">1:47</span>
+                    </div>
+                </div>
+
+                <!-- Audio 3: Zahra, Iran -->
+                <div class="audio-card">
+                    <div class="audio-visual">
+                        <div class="audio-waveform" id="waveform3">
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                        </div>
+                        <button class="audio-play-btn" onclick="playAudio('audio3')">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="audio-info">
+                        <h4>Zahra's Hands</h4>
+                        <p>"A nurse describes treating earthquake victims without supplies"</p>
+                        <span class="audio-duration">3:12</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline of Testimonies -->
+    <section class="timeline">
+        <div class="container">
+            <h2 class="section-title">A History of Loss, One Voice at a Time</h2>
+            
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-date">May 3, 2025</div>
+                    <div class="timeline-content">
+                        <blockquote>"I buried five children in one day."</blockquote>
+                        <cite>— Saeed, Rescue Volunteer, Gaza</cite>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">April 28, 2025</div>
+                    <div class="timeline-content">
+                        <blockquote>"We lived in that tent. Now we sleep in the mud."</blockquote>
+                        <cite>— Mona, Displaced Mother, Iran</cite>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">March 10, 2025</div>
+                    <div class="timeline-content">
+                        <blockquote>"They told us to evacuate. Then they bombed the evacuation road."</blockquote>
+                        <cite>— Leila, Student, Palestine</cite>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">February 15, 2025</div>
+                    <div class="timeline-content">
+                        <blockquote>"My daughter asked if angels have prosthetic legs."</blockquote>
+                        <cite>— Fatima, Mother, Lebanon</cite>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-cta">
+                <a href="#" class="btn btn-secondary">READ FULL ARCHIVE →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conversion Moment -->
+    <section class="conversion-moment">
+        <div class="container">
+            <div class="conversion-content">
+                <blockquote class="conversion-quote">
+                    "You just read my brother's story. Help someone else survive theirs."
+                </blockquote>
+                <cite class="conversion-author">— Mariam, Sister of Ahmad</cite>
+                <div class="conversion-actions">
+                    <a href="donate.html" class="btn btn-primary">
+                        <i class="fas fa-heart"></i> DONATE NOW
+                    </a>
+                    <a href="shop.html" class="btn btn-secondary">
+                        <i class="fas fa-shopping-bag"></i> SHOP TO SUPPORT
+                    </a>
+                    <button class="btn btn-tertiary" onclick="shareStory()">
+                        <i class="fas fa-share"></i> SHARE THESE VOICES
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Call to Action -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="cta-title">Let Memory Be Louder Than Bombs</h2>
+            <p class="cta-subtitle">Every story shared is an act of resistance. Every donation is a declaration of humanity.</p>
+            <div class="cta-actions">
+                <a href="donate.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-heart"></i> GIVE RELIEF
+                </a>
+                <button class="btn btn-secondary btn-large" onclick="openSubmissionModal()">
+                    <i class="fas fa-microphone"></i> SHARE YOUR STORY
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Modal -->
+    <div class="modal" id="storyModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalStoryTitle">Story Title</h3>
+                <button class="modal-close" onclick="closeModal('storyModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalStoryContent">
+                <!-- Story content will be populated by JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <div class="story-actions">
+                    <button class="btn btn-primary" onclick="donateInName()">
+                        <i class="fas fa-heart"></i> Donate in Their Name
+                    </button>
+                    <button class="btn btn-secondary" onclick="shareStory()">
+                        <i class="fas fa-share"></i> Share This Story
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Modal -->
+    <div class="modal" id="audioModal">
+        <div class="modal-content audio-modal-content">
+            <div class="modal-header">
+                <h3 id="audioModalTitle">Audio Testimony</h3>
+                <button class="modal-close" onclick="closeModal('audioModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="audio-player">
+                    <div class="audio-controls">
+                        <button class="audio-control-btn" id="playPauseBtn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="audio-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <div class="time-display">
+                                <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="audio-transcript" id="audioTranscript">
+                        <!-- Transcript will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submission Modal -->
+    <div class="modal" id="submissionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Share Your Story</h3>
+                <button class="modal-close" onclick="closeModal('submissionModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="submission-intro">Have you survived or witnessed this? Let the world hear you.</p>
+                <form class="submission-form" id="storySubmissionForm">
+                    <div class="form-group">
+                        <label for="submitterName">Name (optional - you can remain anonymous)</label>
+                        <input type="text" id="submitterName" placeholder="Your name or 'Anonymous'">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="submitterLocation">Location</label>
+                        <input type="text" id="submitterLocation" placeholder="City, Country" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="storyType">Story Type</label>
+                        <select id="storyType" required>
+                            <option value="">Select category</option>
+                            <option value="survivor">Personal Survival Story</option>
+                            <option value="witness">Witnessed Event</option>
+                            <option value="family">Family Member's Story</option>
+                            <option value="volunteer">Volunteer/Aid Worker</option>
+                            <option value="medical">Medical Professional</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="storyText">Your Story</label>
+                        <textarea id="storyText" rows="8" placeholder="Tell us what happened. Your voice matters." required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="consentPublish" required>
+                            <span class="checkmark"></span>
+                            I consent to having my story published on OneWoundedWorld.org
+                        </label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="consentContact">
+                            <span class="checkmark"></span>
+                            I'm open to being contacted for follow-up (optional)
+                        </label>
+                    </div>
+                    
+                    <div class="safety-notice">
+                        <i class="fas fa-shield-alt"></i>
+                        <p><strong>Your safety is our priority.</strong> We verify all stories and protect your identity. Anonymous submissions are welcome.</p>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> SEND MY VOICE
+                    </button>
+                </form>
+                
+                <div class="verification-link">
+                    <a href="#" class="link-secondary">How We Verify Testimonies →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <div class="floating-action">
+        <button class="fab" onclick="openSubmissionModal()">
+            <i class="fas fa-microphone"></i>
+        </button>
+        <span class="fab-tooltip">Share Your Story</span>
+    </div>
+
+    <script src="stories.js"></script>
+</body>
+</html>
+
